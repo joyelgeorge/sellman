@@ -48,6 +48,37 @@ const dl = await db.query(`SELECT channel_key, SUM(sent)::int AS sent, SUM(bounc
                              FROM deliverability_daily WHERE day >= current_date - (7::int - 1) GROUP BY channel_key`);
 console.log('deliverability rollup:', JSON.stringify(dl.rows));
 
+// seed.js upserts (channels + icps)
+await db.exec(`INSERT INTO channels (key, type, status, config) VALUES ('geo_content','content','active','{"reach_weight":0.8}')
+               ON CONFLICT (key) DO UPDATE SET type=EXCLUDED.type, config=EXCLUDED.config, updated_at=now()`);
+await db.exec(`INSERT INTO icps (key, definition, status) VALUES ('icp2','{"icp_key":"icp2"}','active')
+               ON CONFLICT (key) DO UPDATE SET definition=EXCLUDED.definition, updated_at=now()`);
+console.log('seed upserts: ok');
+
+// partnerChannel.js: accounts upsert with source='partner-channel' (no evidence/disqualifiers/score_why)
+await db.exec(`INSERT INTO accounts (domain, name, icp_key, evidence, score, source)
+               VALUES ('capartner.test','A CA Firm','icp2','[{"signal":"lists tally clients"}]',0,'partner-channel')
+               ON CONFLICT (domain) DO UPDATE SET name=COALESCE(EXCLUDED.name, accounts.name), updated_at=now()`);
+// and the null-icp_key path (agent returned an icp_key that doesn't exist -> worker falls back to null)
+await db.exec(`INSERT INTO accounts (domain, name, icp_key, evidence, score, source)
+               VALUES ('nullicp.test',NULL,NULL,'[]',0,'partner-channel')
+               ON CONFLICT (domain) DO UPDATE SET name=COALESCE(EXCLUDED.name, accounts.name), updated_at=now()`);
+await db.exec(`INSERT INTO approvals (kind, summary, payload) VALUES ('partner_outreach','draft ready','{}')`);
+console.log('partner-channel writes: ok');
+
+// src/web/server.js: unsubscribe + deliverability webhook writes
+await db.exec(`INSERT INTO suppression (value, reason) VALUES ('bounced@x.test','bounce') ON CONFLICT (value) DO NOTHING`);
+const dupSuppress = await db.query(`INSERT INTO suppression (value, reason) VALUES ('bounced@x.test','bounce') ON CONFLICT (value) DO NOTHING RETURNING value`);
+console.log('suppression insert is idempotent:', dupSuppress.rows.length === 0);
+
+await db.exec(`INSERT INTO deliverability_daily (day, channel_key, sender, sent, bounced, complaints)
+               VALUES (current_date, 'outbound_email', 'a@b', 0, 1, 0)
+               ON CONFLICT (day, channel_key, sender) DO UPDATE SET
+                 bounced = deliverability_daily.bounced + EXCLUDED.bounced,
+                 complaints = deliverability_daily.complaints + EXCLUDED.complaints`);
+const bounced = await db.query(`SELECT sent, bounced FROM deliverability_daily WHERE channel_key='outbound_email'`);
+console.log('bounce webhook increments bounced without touching sent:', bounced.rows[0].sent === 1 && bounced.rows[0].bounced === 1);
+
 const exp = await db.query(`INSERT INTO experiments (card, conversion_event, status) VALUES ('{"hypothesis":"h"}','audit_completed','running') RETURNING id`);
 await db.exec(`INSERT INTO arms (experiment_id, label) VALUES (${exp.rows[0].id},'control'), (${exp.rows[0].id},'variant')`);
 const arms = await db.query(`SELECT a.id, a.label, a.status,

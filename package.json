@@ -10,6 +10,8 @@
   "scripts": {
     "test": "node --test test/*.test.js",
     "migrate": "node src/index.js migrate",
+    "seed": "node src/index.js seed",
+    "serve": "node src/index.js serve",
     "daemon": "node src/index.js daemon",
     "schedule": "node src/index.js schedule",
     "approvals": "node src/index.js approvals",

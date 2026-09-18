@@ -13,4 +13,6 @@ export const SCHEDULE = [
   { worker: 'strategist',         cron: '30 1 * * 1',   note: 'Mon 07:00 IST — weekly review, ≤3 bets' },
   { worker: 'market-research',    cron: '30 2 * * 2',   note: 'Tue 08:00 IST — segments, ICP updates' },
   { worker: 'competitor-watch',   cron: '30 2 * * 3',   note: 'Wed 08:00 IST — pricing & platform moves' },
+  { worker: 'partner-channel',    cron: '30 2 * * 5',   note: 'Fri 08:00 IST — find referral partners, draft one intro note each' },
+  { worker: 'founder-digest',     cron: '0 3 * * 1',    note: 'Mon 08:30 IST — one-screen report: revenue, top channel, pending approvals' },
 ];

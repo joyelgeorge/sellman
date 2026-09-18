@@ -66,12 +66,14 @@ Two things make this different from a normal marketing stack:
 cp .env.example .env            # fill DATABASE_URL, AI keys, TASKMAN_BRAIN_URL
 npm install
 npm run migrate
+npm run seed                    # load channels/ICPs/competitor watchlist from config/*.json
 npm test                        # guards, scoring, cron, brain diff, agent specs
 npm run schema:check            # runs the schema + worker SQL against an in-process Postgres
 
 # Bootstrap from the example manifest until Taskman exposes /brain/manifest
 TASKMAN_BRAIN_FILE=config/brain.example.json node src/index.js run brain-sync
 
+npm run serve                       # events, unsubscribe, and deliverability webhooks
 node src/index.js schedule          # show the cron table
 node src/index.js run strategist    # run any worker once
 node src/index.js approvals         # list items waiting for your yes/no

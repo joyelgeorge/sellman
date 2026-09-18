@@ -8,6 +8,8 @@ const [, , command, ...args] = process.argv;
 const HELP = `sellman — the sales department for Taskman
 
   node src/index.js migrate                 apply database migrations
+  node src/index.js seed                    load config/*.json into channels, icps, competitor watchlist
+  node src/index.js serve                   run the HTTP surface (events, unsubscribe, deliverability webhooks)
   node src/index.js schedule                print the cron table
   node src/index.js run <worker> [--json]   run one worker now
   node src/index.js daemon                  run the in-process scheduler
@@ -26,6 +28,16 @@ async function main() {
       const { migrate } = await import('./db/migrate.js');
       await migrate();
       break;
+    }
+    case 'seed': {
+      const { seed } = await import('./db/seed.js');
+      console.log(JSON.stringify(await seed(), null, 2));
+      break;
+    }
+    case 'serve': {
+      const { serve } = await import('./web/server.js');
+      serve();
+      return; // keep the process alive
     }
     case 'schedule': {
       const { SCHEDULE } = await import('./scheduler/table.js');

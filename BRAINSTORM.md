@@ -39,7 +39,9 @@ opted-in email to users whose audit showed that leak type, and a GEO page. You a
 9. **Public MCP "leak audit" server** so a merchant's own AI assistant can run the audit. Listed in MCP
    registries. Cheap to try, and agents don't need persuading. [next]
 10. **Partner links for CA firms and Tally partners**: revenue share, self-serve dashboard, no calls.
-    They already have the relationship you don't want to maintain. [next]
+    They already have the relationship you don't want to maintain. [partly built 2026-09-18 —
+    `partner-manager` agent + `partner-channel` worker find and draft intros; revenue-share dashboard
+    itself is still [next]]
 11. **Stripe/Razorpay consultants & agencies** as referrers — they get asked "why is churn high?" weekly. [next]
 12. **Shareable recovery milestones** ("₹1 lakh recovered this quarter") with opt-in public badge. [later]
 13. **Quarterly leakage benchmark report** — citable by AI engines and newsletters. Needs data consent in
@@ -76,7 +78,8 @@ opted-in email to users whose audit showed that leak type, and a GEO page. You a
 27. **Claims ledger**: every published sentence with a number links to the Taskman proof it came from. [now]
 28. **Lost-install interviews without calls**: one-question in-app survey when someone runs an audit and
     doesn't install. [next]
-29. **Weekly one-screen report** to your phone: attributed revenue, top channel, 3 pending approvals. [now]
+29. **Weekly one-screen report** to your phone: attributed revenue, top channel, 3 pending approvals. [built
+    2026-09-18 — `founder-digest` worker, Mon 08:30 IST]
 
 ---
 

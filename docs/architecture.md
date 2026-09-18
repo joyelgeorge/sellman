@@ -21,6 +21,8 @@ structured JSON that workers validate, guard, and store.
 | Analytics | — | `attribution` | nightly 01:00 | channel → revenue table | no |
 | Experiments | — | `experiments` | nightly 02:00 | arm scores, auto-pause | no |
 | Strategy | `strategist` | `strategist` | weekly Mon 07:00 | ≤ 3 bets, report | yes |
+| Partner channel | `partner-manager` | `partner-channel` | weekly Fri 08:00 | candidate partners, one draft intro note each | yes, always |
+| Reporting | — | `founder-digest` | weekly Mon 08:30 | one-screen digest: revenue, top channel, pending approvals | no |
 | Safety | — | `kill-switch` | every 15 min | pauses, alerts | no |
 
 ## Flow of truth
@@ -64,6 +66,22 @@ shared package, replace this file with an import — the interface is `complete(
 
 Agents never send, publish, or write to the DB. That keeps side effects in deterministic code where they can
 be capped, tested, retried, and audited — and makes swapping models safe.
+
+## Web surface
+
+`node src/index.js serve` (`src/web/server.js`) is the one HTTP surface Sellman exposes — plain
+`node:http`, no framework, because it's three small routes:
+
+- `POST /events` — the audit/landing surface posts funnel events (`visit`, `audit_completed`, `install`, …)
+- `GET /u/:token` — one-click unsubscribe; `:token` is HMAC-signed (`src/web/tokens.js`) so a stranger can't
+  suppress an email they don't own by guessing a URL
+- `POST /webhooks/bounce`, `POST /webhooks/complaint` — feed `deliverability_daily` so `kill-switch` isn't
+  blind; body is the generic `{email, channel_key, sender}` shape (`src/web/webhooks.js`). A real mail
+  provider's webhook payload (Resend's, once an account exists) needs a small adapter mapped in front of
+  this — don't guess that schema ahead of an account to verify it against.
+
+All three routes only validate + write; the guard/approval logic they need already lives in `src/guard` and
+`src/approvals` and is exercised the same way workers are.
 
 ## Deployment options
 

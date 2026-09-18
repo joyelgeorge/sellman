@@ -19,6 +19,6 @@ matching SKILL.md bodies into the agent's context.
 | self-serve-conversion | lifecycle-writer, content-strategist |
 | attribution-and-experiments | strategist |
 | claims-and-compliance | every agent that drafts customer-facing text |
-| partner-channel | strategist, content-strategist |
+| partner-channel | strategist, content-strategist, partner-manager |
 
 These are also valid Claude skills — zip a folder to use it in Claude directly.

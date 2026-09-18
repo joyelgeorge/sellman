@@ -12,6 +12,8 @@ export const WORKERS = {
   'market-research':    () => import('./marketResearch.js'),
   'competitor-watch':   () => import('./competitorWatch.js'),
   'lifecycle':          () => import('./lifecycle.js'),
+  'partner-channel':    () => import('./partnerChannel.js'),
+  'founder-digest':     () => import('./founderDigest.js'),
 };
 
 export async function runWorker(name, args = {}) {
