@@ -1,0 +1,24 @@
+{
+  "_note": "Conservative defaults, not legal advice. Have a lawyer confirm before enabling outbound. Modes: opt_out_allowed | consent_required | blocked.",
+  "default_mode": "consent_required",
+  "cooldown_days": 90,
+  "max_follow_ups": 1,
+  "jurisdictions": {
+    "US": { "mode": "opt_out_allowed", "law": "CAN-SPAM", "requires": ["sender identity", "postal address", "working opt-out"] },
+    "GB": { "mode": "opt_out_allowed", "law": "PECR/UK GDPR (corporate subscribers)", "requires": ["opt-out", "identity"], "notes": "Sole traders and some partnerships count as individuals — treat as consent_required if unsure" },
+    "AU": { "mode": "consent_required", "law": "Spam Act 2003" },
+    "CA": { "mode": "consent_required", "law": "CASL" },
+    "DE": { "mode": "consent_required", "law": "UWG/GDPR" },
+    "FR": { "mode": "consent_required", "law": "CPCE/GDPR", "notes": "B2B exceptions exist; default conservative" },
+    "IN": { "mode": "consent_required", "law": "DPDP Act 2023 / Rules 2025", "notes": "Full enforcement by 13 May 2027; treat marketing email as opt-in now" },
+    "UNKNOWN": { "mode": "consent_required" }
+  },
+  "deliverability": {
+    "window_days": 7,
+    "min_sent": 50,
+    "bounce_alarm": 0.015,
+    "bounce_pause": 0.02,
+    "complaint_alarm": 0.001,
+    "complaint_pause": 0.002
+  }
+}

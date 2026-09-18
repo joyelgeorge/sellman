@@ -1,0 +1,10 @@
+{
+  "_note": "USD per million tokens. Placeholders — update from each provider's current pricing page.",
+  "models": {
+    "anthropic:claude-haiku-4-5-20251001": { "in": 1.0, "out": 5.0 },
+    "anthropic:claude-sonnet-5": { "in": 3.0, "out": 15.0 },
+    "anthropic:claude-opus-5": { "in": 5.0, "out": 25.0 },
+    "openai_compat:llama-3.3-70b-versatile": { "in": 0.6, "out": 0.8 }
+  },
+  "monthly_fixed_usd": { "hosting": 0, "email_provider": 0, "domains": 2 }
+}

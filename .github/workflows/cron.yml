@@ -1,0 +1,78 @@
+# Scheduled workers. Mirrors src/scheduler/table.js — keep the two in sync
+# (or drop this file and run `node src/index.js daemon` on a host instead).
+name: workers
+on:
+  workflow_dispatch:
+    inputs:
+      worker:
+        description: worker name
+        required: true
+  schedule:
+    - cron: '*/15 * * * *'   # kill-switch
+    - cron: '5 * * * *'      # brain-sync
+    - cron: '20 * * * *'     # lifecycle
+    - cron: '30 0 * * *'     # signal-scout
+    - cron: '30 19 * * *'    # attribution
+    - cron: '30 20 * * *'    # experiments
+    - cron: '30 3 * * *'     # community-listener
+    - cron: '0 14 * * 1-5'   # outbound-batch
+    - cron: '45 */6 * * *'   # offer-architect
+    - cron: '30 4 * * 1,4'   # content-engine
+    - cron: '30 1 * * 1'     # strategist
+    - cron: '30 2 * * 2'     # market-research
+    - cron: '30 2 * * 3'     # competitor-watch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      TASKMAN_BRAIN_URL: ${{ secrets.TASKMAN_BRAIN_URL }}
+      TASKMAN_BRAIN_TOKEN: ${{ secrets.TASKMAN_BRAIN_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPENAI_COMPAT_BASE_URL: ${{ secrets.OPENAI_COMPAT_BASE_URL }}
+      OPENAI_COMPAT_API_KEY: ${{ secrets.OPENAI_COMPAT_API_KEY }}
+      SELLMAN_OUTBOUND_ENABLED: ${{ vars.SELLMAN_OUTBOUND_ENABLED }}
+      SELLMAN_MAIL_TRANSPORT: ${{ vars.SELLMAN_MAIL_TRANSPORT }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      SELLMAN_SENDER_NAME: ${{ vars.SELLMAN_SENDER_NAME }}
+      SELLMAN_SENDER_EMAIL: ${{ vars.SELLMAN_SENDER_EMAIL }}
+      SELLMAN_POSTAL_ADDRESS: ${{ vars.SELLMAN_POSTAL_ADDRESS }}
+      SELLMAN_UNSUBSCRIBE_BASE_URL: ${{ vars.SELLMAN_UNSUBSCRIBE_BASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install --no-audit --no-fund --omit=dev
+      - name: pick workers for this trigger
+        id: pick
+        run: |
+          case "${{ github.event.schedule }}" in
+            "*/15 * * * *")  echo "workers=kill-switch" >> $GITHUB_OUTPUT ;;
+            "5 * * * *")     echo "workers=brain-sync" >> $GITHUB_OUTPUT ;;
+            "20 * * * *")    echo "workers=lifecycle" >> $GITHUB_OUTPUT ;;
+            "30 0 * * *")    echo "workers=signal-scout" >> $GITHUB_OUTPUT ;;
+            "30 19 * * *")   echo "workers=attribution" >> $GITHUB_OUTPUT ;;
+            "30 20 * * *")   echo "workers=experiments" >> $GITHUB_OUTPUT ;;
+            "30 3 * * *")    echo "workers=community-listener" >> $GITHUB_OUTPUT ;;
+            "0 14 * * 1-5")  echo "workers=outbound-batch" >> $GITHUB_OUTPUT ;;
+            "45 */6 * * *")  echo "workers=offer-architect" >> $GITHUB_OUTPUT ;;
+            "30 4 * * 1,4")  echo "workers=content-engine" >> $GITHUB_OUTPUT ;;
+            "30 1 * * 1")    echo "workers=strategist" >> $GITHUB_OUTPUT ;;
+            "30 2 * * 2")    echo "workers=market-research" >> $GITHUB_OUTPUT ;;
+            "30 2 * * 3")    echo "workers=competitor-watch" >> $GITHUB_OUTPUT ;;
+            *)               echo "workers=${{ github.event.inputs.worker }}" >> $GITHUB_OUTPUT ;;
+          esac
+      - name: run
+        run: |
+          for w in ${{ steps.pick.outputs.workers }}; do
+            echo "--- $w"
+            node src/index.js run "$w"
+          done
+      - name: commit weekly report
+        if: github.event.schedule == '30 1 * * 1'
+        run: |
+          git config user.name "sellman-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -f reports/ && git diff --staged --quiet || git commit -m "weekly report"
+          git push || true

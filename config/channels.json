@@ -1,0 +1,10 @@
+[
+  { "key": "stripe_marketplace", "type": "marketplace", "reach_weight": 1.0, "status": "active" },
+  { "key": "geo_content",        "type": "content",     "reach_weight": 0.8, "status": "active" },
+  { "key": "calculator",         "type": "content",     "reach_weight": 0.8, "status": "active" },
+  { "key": "community",          "type": "community",   "reach_weight": 0.6, "status": "active" },
+  { "key": "partner",            "type": "partner",     "reach_weight": 0.7, "status": "disabled" },
+  { "key": "mcp_registry",       "type": "marketplace", "reach_weight": 0.4, "status": "disabled" },
+  { "key": "tallyshop",          "type": "marketplace", "reach_weight": 0.9, "status": "disabled" },
+  { "key": "outbound_email",     "type": "outbound",    "reach_weight": 0.3, "status": "disabled", "daily_cap": 30 }
+]

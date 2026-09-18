@@ -1,0 +1,5 @@
+{
+  "min_exposures_per_arm": 100,
+  "min_conversions_to_declare_winner": 20,
+  "max_concurrent_per_funnel_step": 1
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "icp_key": "saas_stripe_10k_250k_mrr",
+    "capability_keys": ["stripe.failed_payment_recovery", "stripe.leak_audit"],
+    "must_have": ["uses stripe billing", "subscription pricing page", "self-serve signup"],
+    "nice_to_have": ["monthly plans", "prosumer or SMB buyers"],
+    "disqualifiers": ["enterprise invoicing only", "uses paddle or chargebee as merchant of record"],
+    "observable_signals": [
+      { "signal": "subscription pricing page", "source": "public website", "weight": 0.3 },
+      { "signal": "billing or card failure complaints", "source": "community/forum/reviews", "weight": 0.4 },
+      { "signal": "stripe customer portal link", "source": "public website", "weight": 0.3 }
+    ],
+    "pain_hypothesis": "Loses meaningful MRR to leakage beyond Stripe's default retries (refunds, disputes, expired-card cohorts, trial leaks)",
+    "how_the_audit_confirms_it": "Leak audit shows non-retry leakage large enough that the fee beats the effort of installing",
+    "reachable_via": ["stripe_marketplace", "geo_content", "calculator", "community"],
+    "confidence": "low"
+  },
+  {
+    "icp_key": "in_subscription_razorpay",
+    "capability_keys": [],
+    "must_have": ["uses razorpay subscriptions or upi autopay", "recurring pricing in inr"],
+    "nice_to_have": ["multiple gateways"],
+    "disqualifiers": [],
+    "observable_signals": [
+      { "signal": "upi autopay mentioned at checkout", "source": "public website", "weight": 0.5 },
+      { "signal": "mandate or autopay complaints", "source": "community/app reviews", "weight": 0.5 }
+    ],
+    "pain_hypothesis": "Revenue lost at mandate registration and debit failure, invisible across gateways",
+    "how_the_audit_confirms_it": "Cross-gateway report shows registration drop-off and failed debit value",
+    "reachable_via": ["geo_content", "partner", "community"],
+    "confidence": "low",
+    "notes": "Inbound/partner only — consent_required jurisdiction for outbound"
+  }
+]

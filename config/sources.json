@@ -1,0 +1,9 @@
+{
+  "_note": "Only sources you are allowed to fetch. Prefer official APIs/RSS. robots.txt is checked before every fetch.",
+  "signal_scout": [
+    { "name": "example-directory", "url": "https://example.com/stripe-apps-customers", "icp_key": "saas_stripe_10k_250k_mrr", "enabled": false }
+  ],
+  "community": [
+    { "name": "example-forum-rss", "url": "https://example.com/forum/billing.rss", "rules": "Self-promotion allowed only with disclosure; no links in first reply", "enabled": false }
+  ]
+}

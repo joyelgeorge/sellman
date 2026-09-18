@@ -1,0 +1,25 @@
+{
+  "name": "sellman",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sales & marketing department for Taskman \u2014 finds, converts, and attributes paying customers without sales calls.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "migrate": "node src/index.js migrate",
+    "daemon": "node src/index.js daemon",
+    "schedule": "node src/index.js schedule",
+    "approvals": "node src/index.js approvals",
+    "lint:skills": "node src/index.js lint-skills",
+    "schema:check": "node scripts/schema-check.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.2.0"
+  }
+}

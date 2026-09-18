@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-17T08:00:00Z",
+  "_note": "Example manifest for bootstrapping. Replace with Taskman's real /brain/manifest. Statuses and numbers here are placeholders, not results.",
+  "capabilities": [
+    {
+      "key": "stripe.failed_payment_recovery",
+      "name": "Failed payment recovery for Stripe",
+      "status": "beta",
+      "wedge": "revenue_recovery",
+      "summary": "Listens to Stripe billing events, detects failed invoices by decline code, and runs recovery actions.",
+      "integrations": ["stripe"],
+      "limits": ["Stripe Billing subscriptions only", "No PayPal or Paddle"],
+      "pricing_hint": { "model": "percent_of_verified", "percent": 15 },
+      "proof": { "sample_accounts": 1, "period_days": 30, "metrics": {} }
+    },
+    {
+      "key": "stripe.leak_audit",
+      "name": "Stripe leak audit",
+      "status": "building",
+      "wedge": "revenue_recovery",
+      "summary": "Read-only scan of Stripe history that estimates revenue lost to failed payments, refunds, disputes and trial leaks.",
+      "integrations": ["stripe"],
+      "limits": ["Read-only restricted key or CSV export"],
+      "proof": {}
+    },
+    {
+      "key": "contracts.silent_renegotiation",
+      "name": "Silent renegotiation",
+      "status": "planned",
+      "wedge": "renegotiation",
+      "summary": "Detects overpaying recurring B2B contracts and drafts first-pass renegotiations for human approval.",
+      "integrations": ["gmail", "bank_csv"],
+      "limits": [],
+      "proof": {}
+    },
+    {
+      "key": "tally.stock_variance",
+      "name": "Tally stock variance check",
+      "status": "planned",
+      "wedge": "shrinkage",
+      "summary": "Compares billed sales against stock movement in Tally to flag shrinkage and reconciliation gaps.",
+      "integrations": ["tally"],
+      "limits": ["TallyPrime data folder access required"],
+      "proof": {}
+    }
+  ],
+  "customers": []
+}

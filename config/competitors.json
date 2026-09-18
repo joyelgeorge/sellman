@@ -1,0 +1,20 @@
+{
+  "_note": "Seed watch list. Verify URLs on first run; competitor-watch stores dated snapshots.",
+  "revenue_recovery": [
+    { "name": "Stripe Smart Retries", "url": "https://stripe.com/billing", "type": "platform_default" },
+    { "name": "Churnkey", "url": "https://churnkey.co" },
+    { "name": "Churn Buster", "url": "https://churnbuster.io" },
+    { "name": "Butter Payments", "url": "https://www.butterpayments.com" },
+    { "name": "FlyCode", "url": "https://www.flycode.com" },
+    { "name": "Recurflux", "url": "https://recurflux.com" }
+  ],
+  "india_recurring": [
+    { "name": "Razorpay Intelligent Retry Engine", "url": "https://razorpay.com/upi-autopay/", "type": "platform_default" }
+  ],
+  "renegotiation": [
+    { "name": "Tropic", "url": "https://www.tropicapp.io" },
+    { "name": "Vertice", "url": "https://www.vertice.one" },
+    { "name": "Varisource", "url": "https://www.varisource.com" },
+    { "name": "SpendHound", "url": "https://www.spendhound.com" }
+  ]
+}
