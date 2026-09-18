@@ -168,3 +168,22 @@ before sending anything.
 | 4 | Renegotiation audit for sub-$200K software spend SMBs | Segment priced out by incumbents |
 | 5 | Tally shrinkage via partner channel (Kerala pilot first) | Real access already exists; partner does the relationship |
 | 6 | Capped, evidence-led outbound (non-consent-first jurisdictions only) | Useful for learning messaging, not for scale |
+
+**2026-09-18 update — this ranking wasn't checked against Taskman's own numbers until now.** Taskman scores
+every territory it has tried against a weighted rubric (`packages/core/territory/scoring.js` in the Taskman
+repo, not a vendor blog — verifiable directly). Distribution carries 0.35 of the weight, and it's the one
+dimension this whole file was ranking on secondhand (marketplace friction, incumbent pricing) rather than
+first-hand (does the operator already have permission to talk to this buyer). Run against that scorer:
+
+| Motion | Distribution label | Score |
+|---|---|---|
+| Tally duplicate-invoice/shrinkage audit | `relationship_exists` (retailer access already in hand) | **0.92** |
+| Stripe App Marketplace recovery (rank 2 above) | `buyers_already_searching`, but large build + crowded | 0.62 |
+| Vibe-coded-app security audit (not in this file at all — Taskman's own current in-flight lane) | `must_create_demand`, capped | 0.50 |
+| Renegotiation audit, sub-$200K spend (rank 4 above) | `must_create_demand`, capped, large build | 0.46 |
+
+Source: Taskman `packages/core/territory/registry.js` (`EXPLORED_TERRITORIES`) and `scoring.js`, run
+2026-09-18. This doesn't override the table above — the Stripe/GEO/marketplace research is still real and
+still worth having — but it says the *rank* should put Tally above Stripe, and it flags that Wedge D
+(vibe-coded-app security) is a live Taskman lane this document never accounted for. See `BRAINSTORM.md`
+items #30–32 for what follows from that.

@@ -39,6 +39,11 @@ Goal: a free audit that shows a stranger money they're losing, without talking t
 customer's perceived effort. If audits find little non-retry leakage, drop wedge A to secondary and move
 Phase 1 to wedge B (renegotiation audit).
 
+> **Open as of 2026-09-18, not yet decided:** Taskman's own territory scorer ranks wedge C (Tally, already
+> has a reachable retailer) above wedge A (Stripe, cold marketplace + crowded incumbents) — see
+> `RESEARCH.md` §7 update and `BRAINSTORM.md` #30–31. This phase still defaults to wedge A pending an
+> explicit call from the operator on wedge order; it hasn't been changed here.
+
 ---
 
 ## Phase 2 — First distribution, first money (Weeks 3–8)

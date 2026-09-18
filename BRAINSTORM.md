@@ -92,3 +92,39 @@ opted-in email to users whose audit showed that leak type, and a GEO page. You a
   feature isn't live.
 - **[no] Fake or incentivised-without-disclosure reviews on marketplaces.** Delisting risk.
 - **[no] Inviting customers into Taskman itself.** Taskman stays private; customers get product faces.
+
+---
+
+## Session addendum — 2026-09-18, checked against Taskman's own scoring
+
+Taskman scores every lane it has actually tried in `packages/core/territory/scoring.js`, weighted 0.35
+on one question: who says yes without a sales conversation. Running that scorer against the wedges this
+file assumes surfaced a mismatch worth recording before it gets built into the brain contract.
+
+30. **[now] Wedge D — vibe-coded-app security is missing from this file entirely.** It's Taskman's own
+    current in-flight lane (2 disclosures sent, waiting on reply) and its critical finding (2026-09-08)
+    names it as the only validated-paying market found so far. `RESEARCH.md`/`ROADMAP.md` predate that
+    finding and default to Wedge A (Stripe) instead. Scored: `must_create_demand`, capped at 0.50 —
+    same cap as Wedge A's audit-only entry and the existing `audit-tool-contingency` lane. Add it as a
+    fourth wedge and a fourth product face; don't let Sellman's channel-building imply it doesn't exist.
+
+31. **[now] Re-rank Wedge A against Wedge C before building either audit.** Scored against the same
+    rubric: Tally duplicate-invoice/shrinkage = 0.92 (`relationship_exists` — a retailer already
+    reachable, no sales call needed). Stripe App Marketplace recovery = 0.62 (`buyers_already_searching`,
+    but a large build against incumbents already at $120–700/mo, crowded). Renegotiation (Wedge B) =
+    0.46, capped (`must_create_demand`, large build, nobody asking yet). The roadmap's Phase 1 gate
+    picks Wedge A by default; the scorer says Wedge C is the one with a distribution advantage nothing
+    else on this list has. Worth an explicit decision, not an inherited default.
+
+32. **[next] Read the wedge/channel priority live from Taskman's registry instead of hardcoding it here.**
+    `packages/core/territory/registry.js` already carries `distribution`, `economics`, and `rail` per
+    lane, and it changes as lanes get proven or killed (see `isNovel()` / `VERDICT`). `brain-sync` already
+    reads Taskman's manifest hourly — extending that read to include the registry's ranking would let
+    offer-architect and strategist re-rank which product face gets the marketing push automatically when
+    a lane's verdict flips, instead of the roadmap's phase order silently going stale the way it did here.
+
+33. **[later] A single scoring vocabulary across both repos.** Sellman's ICP/channel selection and
+    Taskman's territory scoring currently use different mental models for the same question (who buys
+    without being sold to). If Sellman ever needs its own scorer rather than reading Taskman's, reuse the
+    same dimension names (`distribution`, `payoutReach`, `feasibilityWithAssets`, `saturation`) so a
+    finding in one repo is legible in the other without translation.
