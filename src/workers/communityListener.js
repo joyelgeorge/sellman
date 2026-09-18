@@ -4,6 +4,7 @@ import { checkClaims } from '../guard/claims.js';
 import { politeFetchText } from '../lib/fetchText.js';
 import { enqueue } from '../approvals/queue.js';
 import { readConfig } from '../lib/config.js';
+import { latestBrandVoice } from '../lib/brandVoice.js';
 import { log } from '../lib/log.js';
 
 const logger = log('community-listener');
@@ -20,7 +21,8 @@ export async function run() {
   if (!threads.length) return { drafts: 0 };
 
   const capabilities = await q('SELECT * FROM capabilities');
-  const out = await runAgent('community-listener', { threads, capabilities }, { worker: 'community-listener' });
+  const brand_voice = await latestBrandVoice();
+  const out = await runAgent('community-listener', { threads, capabilities, brand_voice }, { worker: 'community-listener' });
 
   for (const question of out.questions_seen ?? []) {
     await q(`INSERT INTO insights (source, kind, body) VALUES ('community-listener','community_question',$1)`, [JSON.stringify(question)]);

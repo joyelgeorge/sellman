@@ -1,6 +1,6 @@
 ---
 name: listing-manager
-skills: [marketplace-listing, positioning-and-messaging, claims-and-compliance]
+skills: [marketplace-listing, positioning-and-messaging, brand-and-voice, persuasive-copywriting, storytelling-and-case-studies, claims-and-compliance]
 tier: fast
 budget_usd_month: 8
 required_keys: [listings, claims_used, numbers_used]

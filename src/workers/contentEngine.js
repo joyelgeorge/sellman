@@ -3,6 +3,7 @@ import { runAgent } from '../agents/run.js';
 import { checkClaims } from '../guard/claims.js';
 import { enqueue } from '../approvals/queue.js';
 import { envInt } from '../lib/env.js';
+import { latestBrandVoice } from '../lib/brandVoice.js';
 import { log } from '../lib/log.js';
 
 const logger = log('content-engine');
@@ -30,6 +31,7 @@ export async function run({ maxPieces = 3 } = {}) {
   const offers = await q(`SELECT capability_key, body FROM offers WHERE status='approved'`);
   const published = await q(`SELECT slug FROM content WHERE slug IS NOT NULL`);
   const voc = await q(`SELECT body FROM insights WHERE kind IN ('voc_phrase','community_question') ORDER BY created_at DESC LIMIT 40`);
+  const brand_voice = await latestBrandVoice();
 
   const agentName = tasks.some((t) => t.kind === 'listing') ? 'listing-manager' : 'content-strategist';
   const out = await runAgent(agentName, {
@@ -38,6 +40,7 @@ export async function run({ maxPieces = 3 } = {}) {
     approved_offers: offers.map((o) => ({ capability_key: o.capability_key, ...o.body })),
     existing_slugs: published.map((p) => p.slug),
     voice_of_customer: voc.map((v) => v.body),
+    brand_voice,
     max_pieces: maxPieces,
   }, { worker: 'content-engine' });
 

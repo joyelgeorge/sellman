@@ -1,6 +1,6 @@
 ---
 name: outbound-writer
-skills: [compliant-outbound, positioning-and-messaging, claims-and-compliance]
+skills: [compliant-outbound, positioning-and-messaging, brand-and-voice, persuasive-copywriting, claims-and-compliance]
 tier: fast
 budget_usd_month: 10
 required_keys: [emails, claims_used, numbers_used]

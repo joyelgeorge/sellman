@@ -23,7 +23,7 @@ test('agents load with playbooks attached', () => {
 });
 
 test('every agent that drafts public copy carries the claims skill', () => {
-  for (const name of ['offer-architect', 'content-strategist', 'listing-manager', 'outbound-writer', 'community-listener', 'lifecycle-writer', 'partner-manager']) {
+  for (const name of ['offer-architect', 'content-strategist', 'listing-manager', 'outbound-writer', 'community-listener', 'lifecycle-writer', 'partner-manager', 'brand-strategist']) {
     assert.ok(loadAgent(name).skills.includes('claims-and-compliance'), `${name} missing claims-and-compliance`);
   }
 });

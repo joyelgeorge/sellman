@@ -20,5 +20,15 @@ matching SKILL.md bodies into the agent's context.
 | attribution-and-experiments | strategist |
 | claims-and-compliance | every agent that drafts customer-facing text |
 | partner-channel | strategist, content-strategist, partner-manager |
+| brand-and-voice | content-strategist, listing-manager, outbound-writer, community-listener, brand-strategist |
+| persuasive-copywriting | content-strategist, listing-manager, outbound-writer |
+| storytelling-and-case-studies | content-strategist, listing-manager, brand-strategist |
+| growth-loops-and-virality | content-strategist, strategist |
+| founder-led-selling | strategist, brand-strategist |
+| voice-of-customer-research | market-researcher, brand-strategist |
+
+The last six are the "different brain" set (`docs/architecture.md` § Two brains, not one) — judged on
+voice and resonance, not on provability, though every agent that loads them also loads
+claims-and-compliance and is bound by it just the same.
 
 These are also valid Claude skills — zip a folder to use it in Claude directly.

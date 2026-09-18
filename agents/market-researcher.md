@@ -1,6 +1,6 @@
 ---
 name: market-researcher
-skills: [icp-and-segmentation, competitor-intel, claims-and-compliance]
+skills: [icp-and-segmentation, competitor-intel, voice-of-customer-research, claims-and-compliance]
 tier: deep
 budget_usd_month: 25
 required_keys: [findings, icp_updates, open_questions]

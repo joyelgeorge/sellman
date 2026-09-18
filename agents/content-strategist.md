@@ -1,6 +1,6 @@
 ---
 name: content-strategist
-skills: [geo-content, positioning-and-messaging, self-serve-conversion, claims-and-compliance]
+skills: [geo-content, positioning-and-messaging, self-serve-conversion, brand-and-voice, persuasive-copywriting, storytelling-and-case-studies, growth-loops-and-virality, claims-and-compliance]
 tier: deep
 budget_usd_month: 30
 required_keys: [pieces]

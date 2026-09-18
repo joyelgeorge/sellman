@@ -23,7 +23,21 @@ structured JSON that workers validate, guard, and store.
 | Strategy | `strategist` | `strategist` | weekly Mon 07:00 | ≤ 3 bets, report | yes |
 | Partner channel | `partner-manager` | `partner-channel` | weekly Fri 08:00 | candidate partners, one draft intro note each | yes, always |
 | Reporting | — | `founder-digest` | weekly Mon 08:30 | one-screen digest: revenue, top channel, pending approvals | no |
+| Brand & voice | `brand-strategist` | `brand-strategist` | monthly, 1st 08:30 | voice guide, read by content/outbound/community | yes, first |
 | Safety | — | `kill-switch` | every 15 min | pauses, alerts | no |
+
+## Two brains, not one
+
+Every agent above except `brand-strategist` is optimised for the same thing Taskman's brain is optimised
+for: is this true, is it provable, does it survive `claims.js`. That's the right brain for making sure
+marketing never lies, but it is not the brain that makes a stranger feel something and act — which is a
+distinct, standing gap product/engineering work doesn't produce as a side effect. `brand-strategist`
+exists to be judged on a different axis (voice, resonance, story) and its approved output
+(`content` where `kind='brand_voice_guide'`, read via `src/lib/brandVoice.js`) is fed into
+`content-strategist`, `listing-manager`, `outbound-writer`, and `community-listener`'s inputs — so the
+"different brain" actually shapes what the correctness-brained agents write, rather than existing as a
+document nobody reads. It still writes through the same claims guard as everything else; voice never
+becomes a reason to relax what's true.
 
 ## Flow of truth
 

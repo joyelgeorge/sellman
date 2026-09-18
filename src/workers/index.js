@@ -14,6 +14,7 @@ export const WORKERS = {
   'lifecycle':          () => import('./lifecycle.js'),
   'partner-channel':    () => import('./partnerChannel.js'),
   'founder-digest':     () => import('./founderDigest.js'),
+  'brand-strategist':   () => import('./brandStrategist.js'),
 };
 
 export async function runWorker(name, args = {}) {

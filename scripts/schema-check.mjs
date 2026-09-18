@@ -66,6 +66,12 @@ await db.exec(`INSERT INTO accounts (domain, name, icp_key, evidence, score, sou
 await db.exec(`INSERT INTO approvals (kind, summary, payload) VALUES ('partner_outreach','draft ready','{}')`);
 console.log('partner-channel writes: ok');
 
+// brandStrategist.js: voice guide write + the query content-engine/outbound/community read it back with
+await db.exec(`INSERT INTO content (kind, title, body, meta, status) VALUES ('brand_voice_guide','Sellman voice guide','guide text v1','{}','approved')`);
+await db.exec(`INSERT INTO content (kind, title, body, meta, status) VALUES ('brand_voice_guide','Sellman voice guide','guide text v2','{}','approved')`);
+const latest = await db.query(`SELECT body FROM content WHERE kind='brand_voice_guide' AND status='approved' ORDER BY updated_at DESC, id DESC LIMIT 1`);
+console.log('latestBrandVoice reads most recent approved guide:', latest.rows[0]?.body === 'guide text v2');
+
 // src/web/server.js: unsubscribe + deliverability webhook writes
 await db.exec(`INSERT INTO suppression (value, reason) VALUES ('bounced@x.test','bounce') ON CONFLICT (value) DO NOTHING`);
 const dupSuppress = await db.query(`INSERT INTO suppression (value, reason) VALUES ('bounced@x.test','bounce') ON CONFLICT (value) DO NOTHING RETURNING value`);

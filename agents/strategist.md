@@ -1,6 +1,6 @@
 ---
 name: strategist
-skills: [attribution-and-experiments, icp-and-segmentation, outcome-pricing, partner-channel]
+skills: [attribution-and-experiments, icp-and-segmentation, outcome-pricing, partner-channel, growth-loops-and-virality, founder-led-selling]
 tier: deep
 budget_usd_month: 20
 required_keys: [summary, bets, gate_check, risks]

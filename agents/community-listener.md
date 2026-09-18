@@ -1,6 +1,6 @@
 ---
 name: community-listener
-skills: [community-selling, claims-and-compliance]
+skills: [community-selling, brand-and-voice, claims-and-compliance]
 tier: fast
 budget_usd_month: 10
 required_keys: [replies, questions_seen]

@@ -23,6 +23,7 @@ on:
     - cron: '30 2 * * 3'     # competitor-watch
     - cron: '30 2 * * 5'     # partner-channel
     - cron: '0 3 * * 1'      # founder-digest
+    - cron: '0 3 1 * *'      # brand-strategist
 
 jobs:
   run:
@@ -67,6 +68,7 @@ jobs:
             "30 2 * * 3")    echo "workers=competitor-watch" >> $GITHUB_OUTPUT ;;
             "30 2 * * 5")    echo "workers=partner-channel" >> $GITHUB_OUTPUT ;;
             "0 3 * * 1")     echo "workers=founder-digest" >> $GITHUB_OUTPUT ;;
+            "0 3 1 * *")     echo "workers=brand-strategist" >> $GITHUB_OUTPUT ;;
             *)               echo "workers=${{ github.event.inputs.worker }}" >> $GITHUB_OUTPUT ;;
           esac
       - name: run

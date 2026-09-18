@@ -6,6 +6,7 @@ import { enqueue } from '../approvals/queue.js';
 import { readConfig } from '../lib/config.js';
 import { env, envBool, envInt } from '../lib/env.js';
 import { sendMail } from '../lib/mail.js';
+import { latestBrandVoice } from '../lib/brandVoice.js';
 import { log } from '../lib/log.js';
 
 const logger = log('outbound-batch');
@@ -55,6 +56,7 @@ export async function run() {
   const out = await runAgent('outbound-writer', {
     offer: offerRow.body,
     accounts: eligible.map((r) => ({ account_id: r.account_id, contact_id: r.contact_id, domain: r.domain, role: r.role, evidence: r.evidence })),
+    brand_voice: await latestBrandVoice(),
   }, { worker: 'outbound-batch' });
 
   const footer = complianceFooter({

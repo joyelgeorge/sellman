@@ -15,4 +15,5 @@ export const SCHEDULE = [
   { worker: 'competitor-watch',   cron: '30 2 * * 3',   note: 'Wed 08:00 IST — pricing & platform moves' },
   { worker: 'partner-channel',    cron: '30 2 * * 5',   note: 'Fri 08:00 IST — find referral partners, draft one intro note each' },
   { worker: 'founder-digest',     cron: '0 3 * * 1',    note: 'Mon 08:30 IST — one-screen report: revenue, top channel, pending approvals' },
+  { worker: 'brand-strategist',   cron: '0 3 1 * *',    note: '1st of month, 08:30 IST — revise the voice guide content/outbound/community read' },
 ];
