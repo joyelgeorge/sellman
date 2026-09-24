@@ -9,7 +9,7 @@ Trigger: buyer can reproduce the finding.
 
 ## Rule
 
-Anchor to the live offer sheet. Scan $99. Fix $249. Per-finding $80-125. Contingency 20%. Audit $19/mo or $2/batch. Self-serve $5.
+Anchor to the live offer sheet. Audit: 20% of what the customer confirms they recovered, nothing if nothing comes back. Scan, fix, per-finding, and self-serve scan prices are killed (Taskman `vibe-app-security`, 2026-09-21). Do not quote them.
 
 ## Output
 

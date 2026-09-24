@@ -24,10 +24,9 @@ Sellman is the staff, the skills, the crons, and the roadmap for that gap.
 
 | Feature | Price | Rail |
 | --- | --- | --- |
-| Pre-launch security scan | $99 | [paypal.me/joyelgt/99](https://paypal.me/joyelgt/99) |
-| Scan + verified fix PR | $249 or $80-125/finding or 20% contingency | [paypal.me/joyelgt/249](https://paypal.me/joyelgt/249) |
-| Taskman Audit (payout CSV, files never leave the page) | $19/mo or $2/batch | [paypal.me/joyelgt](https://paypal.me/joyelgt) |
-| Self-serve scan unlock | $5 | live at [scan.html](https://taskman-operator.web.app/scan.html) |
+| Taskman Audit (payout reconciliation, files never leave the page) | 20% of what the customer confirms they recovered; nothing if nothing comes back | [paypal.me/joyelgt](https://paypal.me/joyelgt) |
+
+Killed (not for sale): pre-launch security scan, scan + fix PR, $5 self-serve scan unlock. Taskman closed `vibe-app-security` on 2026-09-21 on measurement (~420 deployed apps, 0 real findings; 2 disclosures, 0 replies). See `infra/scout-2026-09-24-taskman-lanes.md`.
 
 Wired (not for sale): usage metering, four-gate job runner. Ticketed (spec only): lead drones aimed at buyers.
 
@@ -66,9 +65,10 @@ scout (public signal)
 
 Every step downstream of a lead has a skill. That is how Taskman stalled. Sellman will not skip a skill.
 
-## Current position (2026-09-18)
+## Current position (2026-09-24)
 
 - Taskman settlements: **0**
-- Strongest lane: payout-audit-direct (live tool, one human marketing action from cash)
-- Second lane: vibe-app security scan+fix (live scanner, fail-closed paywall)
+- Only live lane: payout-audit-direct (20% contingency, one human marketing action from cash)
+- Killed: vibe-app security scan+fix (Taskman, 2026-09-21)
+- Scouted and not opened: seller-reimbursement (lane 4) and DPDP kit (lane 8). Both face free Indian incumbents.
 - Constraint: human send. The machine cannot originate a trusted relationship.
