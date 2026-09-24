@@ -28,3 +28,10 @@ Verified = found in a public source. Confirm = likely, check on the ground.
 
 ## Second Wayanad lane
 Tea/coffee estates (Harrisons Malayalam has Wayanad estates, 15,000+ workforce company-wide). Estate office / manager buys PPE for spraying and field work. [confirm gloves are bought locally vs Kochi HQ]
+
+## Tea estates: access (2026-09-24)
+- Harrisons Malayalam (HML) Wayanad: 5 tea estates, 2,500 ha bearing, 1 CTC + 3 orthodox factories.
+  Estates: Achoor, Chundale, Sentinel Rock (15 km from Meppadi), Perrangodda, Pootumulla, Poonoopuya, Touramulla, Cherambadi, Wentworth, Mayfield.
+  Public contact (Tea Town Wayanad / Achoor): +91 8078885119, +91 9447775501, nvd@harrisonsmalayalam.com
+- UPASI Tea Research Foundation regional centre, Meppadi (since 1971): advises every Wayanad tea estate -> knows all estate managers.
+- Route: estate manager/assistant manager (field + factory PPE) -> ask whether purchase is local or via HML Kochi HQ purchase.
