@@ -71,3 +71,14 @@ Price per pair for each length, MOQ, delivery time, GST number, Udyam number.
 6. Amazon / Flipkart / Amazon Business own-brand listing — household + gardening gloves; plus ONDC.
 7. Agri route: Krishi Bhavans, Rubber Producers' Societies, agro-service centres, nurseries.
 8. Hotels, hospitals (housekeeping, not medical), FM/cleaning contractors.
+
+## F. Demand-signal ideas (find who is already consuming gloves)
+1. MPEDA registered processing-plant list (public) -> every seafood plant in Kerala, with address. Consumption is certain.
+2. Tender WINNERS, not tenders: GeM/Kerala award results name the traders who won glove supply; they need a manufacturer. Sell to the winner.
+3. Import substitution: customs data (Seair/Zauba free snippets) for HS 401519 into Kochi port -> Kerala firms importing gloves today; offer local, faster, cheaper.
+4. Hiring = glove burn: Naukri/Indeed/WhatsApp job posts for peeling workers, housekeeping, sanitation crews -> firms scaling headcount.
+5. New units: KINFRA/KSIDC plot allotments, new FSSAI/factory licences -> new plants needing first supply.
+6. Pain mining: Amazon/Flipkart 1-2 star reviews of competing gloves ("tore in a week") -> bulk buyers and the durability claim to lead with.
+7. Event demand: flood/monsoon clean-up drives, Sabarimala season sanitation, festival clean-ups -> LSG emergency purchase by quotation.
+8. Foreign public tenders: UNGM, EU TED, Gulf municipal portals for "rubber gloves".
+9. Industry groups: seafood-exporter, cashew and cleaning-contractor WhatsApp/Facebook groups -> ask/answer, not spam.
