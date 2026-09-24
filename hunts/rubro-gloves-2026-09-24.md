@@ -19,3 +19,16 @@ For each: buyer, quantity, deadline, contact route, cost. No generic directories
 
 ## Human steps
 GeM registration (Udyam/GST/PAN), quoting on tenders, one paid B2B membership at most. Software never sends.
+
+## Rubro product (from its website, 2026-09-24)
+Natural-rubber gauntlet gloves, diamond-grip palm. All Purpose 10"-22" (115-305 g/pair),
+Heavy Duty 10/12/14" HD (190-300 g/pair), Household 12-14" latex.
+Uses: agriculture, industrial (oils, acids, alkalis), automotive, masonry/cement, household.
+Not medical, not electrical-rated. Kozhuvanal, Kottayam 686584. Ph 6238778438.
+
+## Matched targets
+- Municipal/panchayat sanitation-supply tenders (gloves bundled with gum boots, phenyl, brooms) - tender247 lists.
+- GeM "rubber hand gloves" / "industrial safety glove gauntlet" bids: PSUs, railways, KSEB, ports.
+- Plantation/estate buyers (rubber, tea, coffee estates) - agriculture series.
+- Export: Tradekey Saudi latex/household glove buyers (Durar Masagh Trading, Bassam Trading); go4WorldBusiness glove RFQs.
+  Kenya, Egypt, South Africa are Africa's top glove importers. Verify every lead before quoting.
