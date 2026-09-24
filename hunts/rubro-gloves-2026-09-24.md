@@ -32,3 +32,10 @@ Not medical, not electrical-rated. Kozhuvanal, Kottayam 686584. Ph 6238778438.
 - Plantation/estate buyers (rubber, tea, coffee estates) - agriculture series.
 - Export: Tradekey Saudi latex/household glove buyers (Durar Masagh Trading, Bassam Trading); go4WorldBusiness glove RFQs.
   Kenya, Egypt, South Africa are Africa's top glove importers. Verify every lead before quoting.
+
+## Named buyers found (pass 2, per line)
+- Sanitation/LSG: Koothuparamba Municipality tender - uniforms + PPE incl. gloves for Haritha Karma Sena. 58 Haritha Karma Sena tenders in 2026 (tenderdetail).
+- Household: IndiaMART buy requests - Darshan Sheth (25 Apr 2026, household cleaning gloves); Seraj Siddiqui (long-term reusable household gloves, latex/rubber). Market price floor Rs14-16.50/pair.
+- Export household/latex: Saudi - Durar Masagh Trading Est., Bassam Trading Co. (Tradekey RFQs).
+- Plantation: PCK (8 estates, 6,452 ha) runs e-tenders (pcklimited.in/tender); no glove tender found - purchase dept is the route.
+- Heavy duty/construction: no posted buyer found; retail only.
