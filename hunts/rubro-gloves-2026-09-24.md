@@ -39,3 +39,10 @@ Not medical, not electrical-rated. Kozhuvanal, Kottayam 686584. Ph 6238778438.
 - Export household/latex: Saudi - Durar Masagh Trading Est., Bassam Trading Co. (Tradekey RFQs).
 - Plantation: PCK (8 estates, 6,452 ha) runs e-tenders (pcklimited.in/tender); no glove tender found - purchase dept is the route.
 - Heavy duty/construction: no posted buyer found; retail only.
+
+## Pass 3: named Kerala LSG glove tenders
+- Koothuparamba Municipality: PPE incl. gloves, HKS + sanitation workers (listed 30 Apr 2026, kerala-tenders.co.in).
+- Thirunelli (Wayanad): "Boot, Glouse, Uniform and other items to Haritha Karma Sena" (tendersontime).
+- Thazhekode (Malappuram): Haritha Karma Sena uniform (tendersontime 112008085).
+- Kasargod: uniforms, safety shoes, hand gloves, raincoats, PPE (tender247 81901848).
+Pattern: every Kerala LSG buys HKS gloves yearly - ~1,000+ local bodies. Portal: etenders.kerala.gov.in (keyword "Haritha Karma Sena").
