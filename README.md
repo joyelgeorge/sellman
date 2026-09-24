@@ -1,74 +1,59 @@
 # Sellman
 
-Sales department for [Taskman](https://github.com/joyelgeorge/Taskman).
+Requirement hunter for [Taskman](https://github.com/joyelgeorge/Taskman).
 
-Sellman creates **customers** by selling **live Taskman features**. It does not invite users, collect signups, or grow a waitlist.
+Sellman finds requirements that a payer has **already posted with money committed**, and Taskman builds what they ask for. It does not build a product and then look for customers. It does not collect signups, invite users, or grow a waitlist.
 
 > Settlements table is empty. Everything else is commentary.
 
 ## Why this repo exists
 
-Taskman already has the engine: scanners, payout audit, four-gate job runner, drones, money-flow gates. What it did not have is a department whose only job is to find a specific human with a confirmed pain and sell them a feature that is already live.
+Taskman's measured history is one failure repeated: build supply, then look for demand, then stall at the payment step. Every lane that died, died there. The payout audit is live and priced, and its bottleneck is "inbound demand, not code."
 
-The Taskman brain is explicit:
+Sellman turns the direction around. The payer has already said what they need and set the money aside. Sellman's job is to find that, check it is real and open, and hand Taskman a spec to build to.
+
+The Taskman brain still holds:
 
 - Revenue is a row in `settlements` with a real rail and a non-empty `externalRef`.
-- Scan is marketing. Fix is the product.
-- Human sends every message. Software only prepares.
+- A human submits every deliverable. Software hunts and builds.
 - Past failure: built supply without a paying demand.
-- OSS bounties do not pay. Do not sell them.
 
-Sellman is the staff, the skills, the crons, and the roadmap for that gap.
+## The direction
 
-## What we sell (live only)
-
-| Feature | Price | Rail |
-| --- | --- | --- |
-| Taskman Audit (payout reconciliation, files never leave the page) | 20% of what the customer confirms they recovered; nothing if nothing comes back | [paypal.me/joyelgt](https://paypal.me/joyelgt) |
-
-Killed (not for sale): pre-launch security scan, scan + fix PR, $5 self-serve scan unlock. Taskman closed `vibe-app-security` on 2026-09-21 on measurement (~420 deployed apps, 0 real findings; 2 disclosures, 0 replies). See `infra/scout-2026-09-24-taskman-lanes.md`.
-
-Wired (not for sale): usage metering, four-gate job runner. Ticketed (spec only): lead drones aimed at buyers.
+```
+payer posts requirement + commits money
+  -> hunt-the-requirement      (find it, pass the eight tests in CHARTER.md)
+    -> LANES.md                (scored, with deadline and build step)
+      -> Taskman builds        (to the posted spec, nothing more)
+        -> operator submits    (the one human step)
+          -> close-to-settlement
+```
 
 ## Hard rules
 
-1. A customer is a buyer of a feature. A user is not a customer.
-2. Charge without verify is refused.
-3. Never fabricate cash. Null is a valid finance report.
-4. Never autosend. `SENT` is a human log.
-5. Ticketed work is not an offer. Do not sell the roadmap.
+1. No posted requirement, no build.
+2. No customer-finding, no signups, no waitlists. The payer already exists.
+3. Never fabricate cash. A pending bounty or a shortlist is not money.
+4. Never autosend or autosubmit.
+5. Respect each venue's terms on automation.
 
 ## Layout
 
 ```
-AGENTS.md          department operating rules
-CHARTER.md         what Sellman is and is not
+AGENTS.md          operating rules and bands
+CHARTER.md         what Sellman is, and the eight tests a lane must pass
+LANES.md           open, watched, and killed lanes
 ROADMAP.md         sequence to a real settlement
-skills/            sales and marketing skills (gates)
+skills/            hunt-the-requirement is the default skill
 agents/            named workers + charters
-infra/crons.md     continuous jobs
+infra/             crons and dated scout reports
 ```
 
-Skills are written so a Taskman / Claude / Grok session can load them the same way `.claude/skills` is loaded in Taskman.
-
-## Pipeline
-
-```
-scout (public signal)
-  -> verify-buyer-before-contact
-    -> draft-outreach-never-send
-      -> human sends and logs SENT
-        -> handle-the-reply
-          -> price-the-feature
-            -> close-to-settlement
-```
-
-Every step downstream of a lead has a skill. That is how Taskman stalled. Sellman will not skip a skill.
+Retired with the old direction (kept for history, never loaded as a next step): `demand-from-public-signal`, `verify-buyer-before-contact`, `draft-outreach-never-send`, `handle-the-reply`, `selling-the-feature`, `feature-cartography`, `price-the-feature`.
 
 ## Current position (2026-09-24)
 
-- Taskman settlements: **0**
-- Only live lane: payout-audit-direct (20% contingency, one human marketing action from cash)
-- Killed: vibe-app security scan+fix (Taskman, 2026-09-21)
-- Scouted and not opened: seller-reimbursement (lane 4) and DPDP kit (lane 8). Both face free Indian incumbents.
-- Constraint: human send. The machine cannot originate a trusted relationship.
+- Settlements: **0**
+- Strongest open lane: 0DIN GenAI bug bounty ($500–$15,000 per valid report, standing program). See `LANES.md`.
+- Next build step: once 0DIN's automation terms are read, build a harness that tests in-scope models and drafts reports for the operator to submit.
+- Killed: vibe-app security (Taskman, 2026-09-21). Scouted and dropped: seller-reimbursement and DPDP kit (free incumbents; also product-first).

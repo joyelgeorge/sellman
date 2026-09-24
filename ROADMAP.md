@@ -4,39 +4,38 @@ Authoritative sequence. Do not reorder. Success is a Taskman settlements row.
 
 ## P0 — Honest position — done
 
-Everyone in the department can say: settlements = 0, and name the live feature they will sell.
+Settlements = 0. The build-then-sell direction is retired.
 
-## P0 — First verified buyer — now
+## P0 — First open lane — done (2026-09-24)
 
-One named human or studio with a finding they can reproduce, mapped to one live feature.
+At least one requirement posted by a payer, with money committed and the deadline open, that passes all eight tests in `CHARTER.md`. See `LANES.md`.
 
-## P0 — First human-sent draft — next
+## P0 — Clear the lane's gates — now
 
-A READY_FOR_REVIEW draft becomes SENT because a human sent it and logged it.
+Read the venue's terms and scope. Confirm our build method is allowed and the rail reaches the operator. A failed gate kills the lane, not the roadmap.
 
-Blocked on a verified buyer.
+## P0 — First deliverable built to spec — next
+
+Taskman builds exactly what the posted requirement asks for. The operator submits it.
 
 ## P0 — First settlement — blocked
 
-A Taskman settlements row with rail + non-empty externalRef. This is the only success metric.
+A payout lands: a Taskman settlements row with rail + non-empty externalRef.
 
-Blocked on a human send, then a paid rail.
+Blocked on the first submission.
 
-## P1 — Same feature, three times
+## P1 — Same venue, three payouts
 
-Three settlements on one feature. Then it is a rail, not a story.
+Three settlements from one venue. Then it is a rail, not a story.
 
-## P1 — A dollar while you sleep
+## P1 — Standing requirements over one-off challenges
 
-Self-serve scan or audit collects a payment with no per-customer outreach that week.
-
-## P2 — Sell the engine, not the seat
-
-An operator pays for metered runs of a four-gate job, not for logins.
+Prefer programs that keep posting (per-finding bounties, recurring challenges) so the hunt is not restarted each time.
 
 ## Kill list
 
-- Invite users to Taskman.
-- Live on OSS bounties.
-- Paid acquisition before first settlement.
-- Selling the repo, the drones, or the future as a product.
+- Build a product, then look for customers.
+- Collect signups, invite users, run a waitlist.
+- Paid acquisition or outreach to create demand.
+- Swarmed winner-take-all competitions.
+- Re-opening a Taskman-killed lane under a new name.
