@@ -61,3 +61,13 @@ spec and rate. Watch pcklimited.in/tender for glove items.
 
 ## Fill before sending
 Price per pair for each length, MOQ, delivery time, GST number, Udyam number.
+
+## E. Other routes (explored 2026-09-24)
+1. Seafood processing — Aroor/Chandiroor/Cherthala cluster (KINFRA Seafood Park, Lulu processing hub) + Kochi. Hundreds of peeling/processing units, workers in long rubber gloves daily. Walk-in/phone purchase managers. Strongest private bulk lane.
+2. Other wet industries: cashew factories (Kollam), coir units (Alappuzha), latex/rubber processing, tanneries, dairy (Milma), fish markets.
+3. Safety-equipment & hardware dealers in Kochi/Kottayam — wholesale, they already sell to industry.
+4. Supplyco / Maveli / Consumerfed / Triveni stores — household line; supplier registration with their purchase wing.
+5. Private label (OEM) for existing glove brands and supermarket chains (Lulu, Reliance, local chains).
+6. Amazon / Flipkart / Amazon Business own-brand listing — household + gardening gloves; plus ONDC.
+7. Agri route: Krishi Bhavans, Rubber Producers' Societies, agro-service centres, nurseries.
+8. Hotels, hospitals (housekeeping, not medical), FM/cleaning contractors.
