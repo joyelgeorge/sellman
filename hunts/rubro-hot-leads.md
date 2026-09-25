@@ -7,7 +7,8 @@
 | (Gondal seller) | Gujarat | 18" latex industrial | ₹90 |
 | Fab Industries (Rubberex) | Mumbai | 18" neoprene heavy duty | ₹225 (different material) |
 | Rubro | Kottayam | 18" natural rubber, 240–245 g | ₹108 |
-Rubro 18" is ~20–35% above a Kottayam neighbour. Weight of competitor unknown — if Rubro is heavier, sell on weight/life; if not, price is the blocker.
+CORRECTED (operator): Rubro is industrial grade; AVM ₹80 is a different grade. Fair benchmark = industrial heavy-duty (e.g. ₹225 neoprene). Rubro ₹108 is competitive there.
+Old line: Rubro 18" is ~20–35% above a Kottayam neighbour. Weight of competitor unknown — if Rubro is heavier, sell on weight/life; if not, price is the blocker.
 
 ## Hottest private route: resellers already selling this glove type (evidence = their own listing)
 - Shenoys, Ernakulam — rubber gloves for construction/heavy duty, ₹48/pair listing
