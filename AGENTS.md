@@ -25,6 +25,14 @@ At the end: check the answer against Goal and Unit. If it drifted, fix before se
 - **Filter:** the tests that drop a result. Over-filtering to zero without saying so is also a failure.
 Report both: what was explored, what was dropped and why.
 
+## Operator-directed lanes
+When the operator names a business and product (e.g. Rubro gloves), hunting named buyers for it
+is **Band 3 and open**. The product already exists with real prices, so this is not build-then-sell.
+Requirement-first still shapes the hunt: prefer buyers who are forced or funded to buy (tenders,
+codes, audits, kit lists, reorders). "Never hand the operator 'find a customer'" means software
+finds and prepares the buyers; it does not forbid finding them. Refusing an operator-directed
+lane scores 0 on goal alignment.
+
 ## Session start
 1. Position in one line: settlements, strongest open lane, next step.
 2. Set the execution contract.
@@ -34,7 +42,7 @@ Report both: what was explored, what was dropped and why.
 - **Band 1** — submit a deliverable or close an order; record the payout.
 - **Band 2** — build or prepare against an open lane.
 - **Band 3** — hunt: find and score requirements or buyers; kill dead lanes.
-- **Band 4** — anything with no posted requirement or named buyer behind it. Closed.
+- **Band 4** — building something new with no posted requirement, or growth theatre (invites, waitlists, ads). Closed. Operator-directed lanes are never Band 4.
 
 ## Minimum human intervention
 Software does everything up to the irreducible human act: research, drafting, filling forms,

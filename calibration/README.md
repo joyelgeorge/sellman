@@ -24,3 +24,4 @@ draft against the nearest cases and moves toward (+).
 | C6 | "who in HML decides" | "Contact the company" | Two layers: estate manager vs Kochi purchase, with source | Name the decision node |
 | C7 | "explore other possibilities" | Only more of the same channels | New axis (seafood, standards gap, tender winners) | Exploration floor |
 | C8 | Any research turn | Blocked page → silent guess | "Blocked; verified vs confirm" marked | Mark evidence level |
+| C9 | "Rubro: seafood buyers in Aroor" (arena round 1) | H-A and H-B refused as Band 4, pivoted to 0DIN | Hunt named buyers for the operator's product | Operator-directed lane beats generic band rule |
