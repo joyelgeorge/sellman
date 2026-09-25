@@ -31,6 +31,9 @@ Variants live in `calibration/variants/<type>/<id>.md`.
 | Actionability | no next step | vague | one concrete step the operator can do today |
 | Human touch | needs research, drafting or chasing by the operator | several manual steps | operator only taps: approve, sign, send, or visit once |
 
+**Field-check penalty:** if the operator checks in person and the fit was wrong, the variant
+scores 0 on Evidence and Calibration for that round, and −4 overall.
+
 **Real-world override:** a variant whose output led to an actual reply, visit or order gets +4
 on that round. Reality beats the judge.
 

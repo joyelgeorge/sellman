@@ -14,3 +14,9 @@ Decision path (confirm on visit): QA/HACCP manager writes the glove spec (audits
 | 8 | Premier Exports International | Chandiroor | Purchase | Justdial | verified listing |
 Intro route: KINFRA Seafood Park, Mr. George, Director-Technical, 9446477447 (tenant list).
 Dropped: Abad (cold store, buys in Kochi), Kings Infra (outsources), Choice Canning (Kochi), directory pages.
+
+## FIT UNVERIFIED (2026-09-25)
+Earlier search: peeling lines use thin latex "shrimp gloves" with a wrinkled grip, not heavy gauntlets.
+Before any visit: one phone question to each lead - "What gloves do your peeling/handling staff use, and
+what length/thickness?" Only visit where the answer matches Rubro's range (heavy, long cuff), e.g.
+ice/brine handling, cleaning, chemical wash, freezer loading.

@@ -44,3 +44,7 @@ Tea/coffee estates (Harrisons Malayalam has Wayanad estates, 15,000+ workforce c
 5. Jessie Tea Estate; Parisons tea factory; Chembra Peak estate (small). PRIORITY 3.
 Excluded (not Wayanad): Kolukkumalai (Idukki/TN), Thusharagiri (Kozhikode).
 Full list of trustea-verified factories: trustea.org Verified_entities_list.pdf (filter Wayanad).
+
+## KILLED 2026-09-25: tea estates
+Operator checked in person: Wayanad tea estates do not use heavy rubber gauntlet gloves.
+Do not re-open without evidence of use (tender, supplier listing, photo, buyer statement).

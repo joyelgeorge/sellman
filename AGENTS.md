@@ -50,11 +50,19 @@ price sheets, follow-up calendars. The operator only approves, signs, sends, or 
 Prefer lanes whose repeat revenue needs no new human act (reorders, rate contracts, standing
 programs, self-serve checkout) over lanes that need fresh effort per rupee.
 
+## Evidence before the operator moves
+Never recommend a visit, call or trip unless there is evidence the buyer **currently uses this
+product type**: a tender or RFQ naming it, a supplier listing selling it to them, a photo or
+report of it in use, or the buyer's own statement. An inference ("guidance says elbow gloves,
+so estates must buy them") is a hypothesis: verify it by search or one cheap question first,
+and label it "unverified fit" if it reaches the operator.
+
 ## Never
 - Build before a requirement with committed money exists.
 - Hand the operator "find a customer" as a next action.
 - Answer with categories when the unit is a named buyer.
 - Present a guess as a fact; mark verified vs confirm.
+- Send the operator to a visit on an unverified fit.
 - Send mail, SMS or social from software. Submit to a payer from software.
 - Break a venue's terms on automation.
 - Invent figures, contacts, or relationships.
