@@ -16,3 +16,8 @@ Old line: Rubro 18" is ~20–35% above a Kottayam neighbour. Weight of competito
 - Akash Sales Corporation, Kochi — ₹22/pair listing
 - Quexti Ventures Pvt Ltd, Aluva — 16" gloves listed
 (Confirm each is a trader, not a maker, with one call: "Who manufactures the long gloves you sell?")
+
+## Industrial-grade buyers (private) — Edayar/Eloor, Aluva (2026-09-25)
+Edayar Industrial Development Area: 7 electroplating units, 3 battery units, plus chemical/petrochemical/metallurgy units, and Cochin Minerals and Rutile Ltd (CMRL, private listed; acid-based process).
+Fit: acid/alkali handling -> heavy rubber gauntlets. Label: strong fit, confirm by call (no visit until confirmed).
+Next: unit names from Edayar IDA office / KSPCB records; call each: "What gloves do acid/plating staff use, length, and who buys?"
