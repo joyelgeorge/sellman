@@ -55,3 +55,8 @@ A payer pays a named person, so the operator holds one verified account per venu
 A Taskman `settlements` row with `source` in `{stripe, paypal, bank, manual_receipt}` and a non-empty `externalRef`: a payout from a posted requirement.
 
 Until then, Sellman reports **$0**. A pending bounty, a shortlist, or a leaderboard rank is not cash.
+
+## Human effort test (applies to every lane)
+Rank lanes by human minutes per rupee. A lane whose second and third payment need no new
+human act (reorder, rate contract, standing bounty, self-serve checkout) beats a bigger lane
+that needs fresh selling each time.

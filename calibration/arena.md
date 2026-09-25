@@ -18,7 +18,7 @@ Variants live in `calibration/variants/<type>/<id>.md`.
 3. Judge scores each answer blind to which variant wrote it.
 4. Scores go to `calibration/scoreboard.md`.
 
-## 3. Score (0–2 each, max 16)
+## 3. Score (0–2 each, max 18)
 | Axis | 0 | 1 | 2 |
 | --- | --- | --- | --- |
 | Goal alignment | serves another goal | partly | directly moves the goal |
@@ -29,13 +29,14 @@ Variants live in `calibration/variants/<type>/<id>.md`.
 | Filter honesty | kept junk or hid drops | partial | drops listed with reasons |
 | Calibration | matches a (−) case | neutral | matches a (+) case |
 | Actionability | no next step | vague | one concrete step the operator can do today |
+| Human touch | needs research, drafting or chasing by the operator | several manual steps | operator only taps: approve, sign, send, or visit once |
 
 **Real-world override:** a variant whose output led to an actual reply, visit or order gets +4
 on that round. Reality beats the judge.
 
 ## 4. Selection
 - **Eliminate:** any variant scoring 0 on Goal alignment or Unit in a round (hard drift), or
-  below 8/16 average over its last 3 rounds.
+  below 9/18 average over its last 3 rounds.
 - **Nurture:** the top variant each generation is copied; the copy gets one small change
   (mutation) taken from the best trait of the runner-up. Pool size stays constant.
 - **Keep a wildcard:** one slot always holds a high-exploration variant, so the pool does not

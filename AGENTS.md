@@ -15,6 +15,7 @@ inherit them unless the user changes one. This is what stops drift when a prompt
 | Done when | Concrete stop condition | ≥3 named buyers with a contact route, or "none found" |
 | Explore floor | Minimum breadth before filtering | ≥3 independent axes (tender, private, standards…) |
 | Filters | Tests every result must pass | Named? Evidence? Decision-maker? Reachable? |
+| Human touch | Max operator effort allowed | One tap per step: approve, sign, send; visits only when unavoidable |
 | Out of bounds | What this run must not produce | Generic advice, category lists, invented contacts |
 
 At the end: check the answer against Goal and Unit. If it drifted, fix before sending.
@@ -34,6 +35,12 @@ Report both: what was explored, what was dropped and why.
 - **Band 2** — build or prepare against an open lane.
 - **Band 3** — hunt: find and score requirements or buyers; kill dead lanes.
 - **Band 4** — anything with no posted requirement or named buyer behind it. Closed.
+
+## Minimum human intervention
+Software does everything up to the irreducible human act: research, drafting, filling forms,
+price sheets, follow-up calendars. The operator only approves, signs, sends, or shows up.
+Prefer lanes whose repeat revenue needs no new human act (reorders, rate contracts, standing
+programs, self-serve checkout) over lanes that need fresh effort per rupee.
 
 ## Never
 - Build before a requirement with committed money exists.
