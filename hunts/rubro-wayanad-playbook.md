@@ -35,3 +35,12 @@ Tea/coffee estates (Harrisons Malayalam has Wayanad estates, 15,000+ workforce c
   Public contact (Tea Town Wayanad / Achoor): +91 8078885119, +91 9447775501, nvd@harrisonsmalayalam.com
 - UPASI Tea Research Foundation regional centre, Meppadi (since 1971): advises every Wayanad tea estate -> knows all estate managers.
 - Route: estate manager/assistant manager (field + factory PPE) -> ask whether purchase is local or via HML Kochi HQ purchase.
+
+## Wayanad tea estates — target list (2026-09-25)
+1. Harrisons Malayalam (HML) — Achoor, Arappetta, Chundale, Mayfield factories; Sentinel Rock, Perrangodda, Pootumulla, Cherambadi, Wentworth estates. 2,500 ha. Tel +91 8078885119 / +91 9447775501, nvd@harrisonsmalayalam.com. PRIORITY 1.
+2. Priyadarshini Tea Estate, Mananthavady — cooperative/government-linked, own factory. Likely quotation/tender purchase. PRIORITY 2.
+3. Elstone Tea Estate, Kalpetta. PRIORITY 2.
+4. Ripon Tea Estate, Meppadi — 443 ha. PRIORITY 2.
+5. Jessie Tea Estate; Parisons tea factory; Chembra Peak estate (small). PRIORITY 3.
+Excluded (not Wayanad): Kolukkumalai (Idukki/TN), Thusharagiri (Kozhikode).
+Full list of trustea-verified factories: trustea.org Verified_entities_list.pdf (filter Wayanad).
