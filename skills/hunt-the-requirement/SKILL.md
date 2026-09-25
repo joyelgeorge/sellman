@@ -5,31 +5,26 @@ lane: hunt
 
 # hunt-the-requirement
 
-Default skill. Trigger: every session, every "revenue", every "what next", and whenever a lane closes.
+Default skill. Trigger: every "revenue", "leads", "orders", "what next", or a closed lane.
 
-## Rule
+## Goal terms (fill before starting)
+Goal · Unit · Scope · Done when · Explore floor · Filters · Out of bounds — see AGENTS.md.
 
-Find a requirement a payer has already posted with money committed. Only then build. A product without a posted requirement is Band 4 and closed.
+## Explore (floor: 3 axes, 2 sources each)
+- Posted demand: tenders, RFQs, bounties, challenges, buy requests.
+- Forced demand: rules, codes, audits, kit lists that oblige someone to buy (e.g. Plant Protection Code, HKS kit).
+- Proven consumption: importers, tender winners, hiring, new units, heavy users (estates, seafood).
+- Decision path: who signs, which rule, which budget, which month.
+- One new axis nobody listed yet.
 
-## Where requirements with money attached live
-
-- Per-finding payout programs: AI/LLM bug bounties, OSS bounty programs, audit contests.
-- Funded challenges with published problem statements: government innovation challenges, central-bank and ministry hackathons, defence challenges.
-- Prize pools with a public spec and metric.
-- Grants and tenders with a published scope and budget.
-
-## Procedure
-
-1. Check Taskman's `packages/core/territory/registry.js`. A killed lane stays killed under any name.
-2. For each candidate, answer the eight tests in `CHARTER.md`. Any "no" drops it.
-3. Read the venue's terms before scoring. An automation ban changes what we can build.
-4. Rank: pay-per-valid-output, then shortlist funding, then winner-take-all. Drop swarmed winner-take-all.
-5. Write each survivor into `LANES.md`: payer, requirement, money, deadline, what Taskman builds, rail, open gates, source.
+## Filter (every result)
+1. Named buyer, not a category.
+2. Evidence link; marked verified or confirm.
+3. Decision-maker or office identified.
+4. Reachable: contact route exists.
+5. Fits the product/offer as it is today.
+6. Not killed in the registry or earlier in the session.
 
 ## Output
-
-The lanes, scored, with one recommendation and the first build step. No customer list, no outreach draft.
-
-## Kill
-
-A lane dies when the deadline passes, the pool is swarmed, the terms forbid our method, or the rail cannot reach the operator. Record why in `LANES.md`.
+Results that passed, with source. What was dropped and why (one line each). One recommended
+next step. Then the calibration check against `calibration/README.md`.
